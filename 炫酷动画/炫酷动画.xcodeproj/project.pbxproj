@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5060076A1D3F4DC500A49422 /* CAReplicatorLayer+Animations.m in Sources */ = {isa = PBXBuildFile; fileRef = 506007691D3F4DC500A49422 /* CAReplicatorLayer+Animations.m */; };
 		50EA5D481D3DD3810064DB2D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50EA5D471D3DD3810064DB2D /* main.m */; };
 		50EA5D4B1D3DD3810064DB2D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50EA5D4A1D3DD3810064DB2D /* AppDelegate.m */; };
 		50EA5D4E1D3DD3810064DB2D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50EA5D4D1D3DD3810064DB2D /* ViewController.m */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		506007681D3F4DC500A49422 /* CAReplicatorLayer+Animations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAReplicatorLayer+Animations.h"; sourceTree = "<group>"; };
+		506007691D3F4DC500A49422 /* CAReplicatorLayer+Animations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAReplicatorLayer+Animations.m"; sourceTree = "<group>"; };
 		50EA5D431D3DD3810064DB2D /* 炫酷动画.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "炫酷动画.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50EA5D471D3DD3810064DB2D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		50EA5D491D3DD3810064DB2D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -65,6 +68,8 @@
 				50EA5D4A1D3DD3810064DB2D /* AppDelegate.m */,
 				50EA5D4C1D3DD3810064DB2D /* ViewController.h */,
 				50EA5D4D1D3DD3810064DB2D /* ViewController.m */,
+				506007681D3F4DC500A49422 /* CAReplicatorLayer+Animations.h */,
+				506007691D3F4DC500A49422 /* CAReplicatorLayer+Animations.m */,
 				50EA5D5D1D3DD8220064DB2D /* CAEmitterLayer+Animations.h */,
 				50EA5D5E1D3DD8220064DB2D /* CAEmitterLayer+Animations.m */,
 				50EA5D4F1D3DD3810064DB2D /* Main.storyboard */,
@@ -157,6 +162,7 @@
 				50EA5D4E1D3DD3810064DB2D /* ViewController.m in Sources */,
 				50EA5D4B1D3DD3810064DB2D /* AppDelegate.m in Sources */,
 				50EA5D481D3DD3810064DB2D /* main.m in Sources */,
+				5060076A1D3F4DC500A49422 /* CAReplicatorLayer+Animations.m in Sources */,
 				50EA5D5F1D3DD8220064DB2D /* CAEmitterLayer+Animations.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,6 +312,7 @@
 				50EA5D5C1D3DD3810064DB2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
