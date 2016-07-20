@@ -49,4 +49,47 @@
     return replayer;
     
 }
+
++(CAReplicatorLayer *)barAnimation:(NSUInteger)barsNum Duration:(CFTimeInterval)duration Color:(UIColor *)color Size:(CGRect)size{
+
+    //  背景 layer
+    CAReplicatorLayer * repLayer = [[CAReplicatorLayer alloc] init];
+    repLayer.frame = size;
+    repLayer.backgroundColor = [UIColor lightGrayColor].CGColor;
+    
+    
+    //  1、单条 柱形  (原始层)
+
+    UIBezierPath *barPath = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, 8, repLayer.bounds.size.height*0.8) cornerRadius:0];
+    
+    CAShapeLayer *barlayer = [CAShapeLayer layer];
+    barlayer.path = barPath.CGPath;
+    barlayer.position =CGPointMake(10, 55);
+    barlayer.fillColor = color.CGColor;
+    //  加在 replicator layer 上的 layer 可以复制
+    [repLayer addSublayer:barlayer];
+    
+    CABasicAnimation * moveAnimation = [CABasicAnimation animationWithKeyPath:@"position.y"];
+    moveAnimation.toValue = @(barlayer.position.y - 35);
+    moveAnimation.duration = duration;
+    moveAnimation.autoreverses = YES;
+    moveAnimation.repeatCount = INFINITY;
+    [barlayer addAnimation:moveAnimation forKey:@"moveAnimation"];
+    
+    //   1、设置 replicator 拷贝 为 3份(包括原来的)
+    //      拷贝默认 会出现在相同的位置
+    repLayer.instanceCount = barsNum;
+    
+    //  2、设置每个 拷贝的 位移 (x 上 右移20)
+    //      会同时移动
+    repLayer.instanceTransform = CATransform3DMakeTranslation(20, 0, 0);
+    
+    //  3、设置 延迟
+    repLayer.instanceDelay = 0.33;
+    
+    //  超出边界的不显示
+    repLayer.masksToBounds = YES;
+    
+    return repLayer;
+}
 @end

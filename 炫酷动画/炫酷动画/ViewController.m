@@ -19,7 +19,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self indicatorAnimation];
+    [self barAnimation];
+}
+
+-(void)barAnimation{
+
+    CAReplicatorLayer *replayer = [CAReplicatorLayer barAnimation:5 Duration:0.5 Color:[UIColor redColor] Size: CGRectMake(150, 40, 60, 60)];
+    
+    [self.view.layer addSublayer:replayer];
 }
 
 -(void)indicatorAnimation{
@@ -51,6 +58,7 @@
     //    [heartEmitter addAnimation:heartsBurst forKey:@"heartsBurst"];
     
 }
+
 
 -(void)fireWorks{
     //烟火

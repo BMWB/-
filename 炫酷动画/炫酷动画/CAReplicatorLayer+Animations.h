@@ -14,4 +14,10 @@
  @parma dotsNum 点个数
  */
 +(CAReplicatorLayer *)indicatorAnimation:(NSUInteger)dotsNum Duration:(CFTimeInterval) duration Color:(UIColor *)color Size:(CGRect)size;
+
+/**
+ 基于CAReplicatorLayer－柱形动画
+ */
++(CAReplicatorLayer *)barAnimation:(NSUInteger)barsNum Duration:(CFTimeInterval) duration Color:(UIColor *)color Size:(CGRect)size;
+
 @end
